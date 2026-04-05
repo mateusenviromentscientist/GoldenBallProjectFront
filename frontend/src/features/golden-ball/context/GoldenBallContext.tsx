@@ -6,6 +6,8 @@ export type GoldenBallContextType = {
   selectedWinner: Winner | null;
   searchTerm: string;
   isDetailsOpen: boolean;
+  isLoading: boolean;
+  error: string | null;
   selectWinner: (winner: Winner) => void;
   clearSelection: () => void;
   setSearchTerm: (term: string) => void;
