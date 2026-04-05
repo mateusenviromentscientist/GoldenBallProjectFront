@@ -1,0 +1,78 @@
+import type { Winner } from '../types/winner';
+
+export const winners: Winner[] = [
+  {
+    id: 1,
+    name: 'Lionel Messi',
+    goals: 50,
+    assists: 21,
+    country: 'Argentina',
+    yearWinner: 2023,
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg',
+  },
+  {
+    id: 2,
+    name: 'Karim Benzema',
+    goals: 37,
+    assists: 15,
+    country: 'France',
+    yearWinner: 2022,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Karim_Benzema_2019.jpg',
+  },
+  {
+    id: 3,
+    name: 'Robert Lewandowski',
+    goals: 48,
+    assists: 10,
+    country: 'Poland',
+    yearWinner: 2021,
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/0/03/Robert_Lewandowski%2C_Germany_vs._Poland_%2820_March_2019%29_02.jpg',
+  },
+  {
+    id: 4,
+    name: 'Luka Modric',
+    goals: 10,
+    assists: 14,
+    country: 'Croatia',
+    yearWinner: 2018,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/57/Luka_Modri%C4%87_in_2018.jpg',
+  },
+  {
+    id: 5,
+    name: 'Cristiano Ronaldo',
+    goals: 55,
+    assists: 13,
+    country: 'Portugal',
+    yearWinner: 2017,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg',
+  },
+  {
+    id: 6,
+    name: 'Antoine Griezmann',
+    goals: 29,
+    assists: 18,
+    country: 'France',
+    yearWinner: 2016,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Antoine_Griezmann_2018.jpg',
+  },
+  {
+    id: 7,
+    name: 'Neymar Jr',
+    goals: 43,
+    assists: 22,
+    country: 'Brazil',
+    yearWinner: 2015,
+    image: null,
+  },
+  {
+    id: 8,
+    name: 'Manuel Neuer',
+    goals: 0,
+    assists: 1,
+    country: 'Germany',
+    yearWinner: 2014,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Manuel_Neuer_2018.jpg',
+  },
+];
