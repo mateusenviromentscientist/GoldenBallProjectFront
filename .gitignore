@@ -37,3 +37,7 @@ frontend/node_modules/.tmp/
 
 # Vite
 frontend/.vite/
+
+# OMC internal state
+.omc/
+frontend/.omc/
