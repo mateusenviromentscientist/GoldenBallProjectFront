@@ -2,6 +2,7 @@ import React from 'react';
 import { Target, Zap, Calendar, Globe, X, Trophy } from 'lucide-react';
 import { useGoldenBallContext } from '../context/useGoldenBallContext';
 import { getCountryFlag } from '../utils/countryFlags';
+import { resolveImageSrc } from '../utils/imageUtils';
 
 type StatPillProps = { icon: React.ReactNode; label: string; value: number | null };
 
@@ -21,6 +22,7 @@ export const WinnerDetailsCard = React.memo(function WinnerDetailsCard() {
   if (!selectedWinner) return null;
 
   const avatarFallback = `https://ui-avatars.com/api/?name=${encodeURIComponent(selectedWinner.name ?? 'Unknown')}&background=374151&color=d1d5db&size=80`;
+  const imageSrc = resolveImageSrc(selectedWinner.image, avatarFallback);
 
   return (
     <div className="rounded-2xl border border-amber-500/30 bg-gradient-to-br from-gray-900 to-gray-800/80 p-6 relative overflow-hidden">
@@ -38,7 +40,7 @@ export const WinnerDetailsCard = React.memo(function WinnerDetailsCard() {
       <div className="flex items-start gap-4 mb-6">
         <div className="relative shrink-0">
           <img
-            src={selectedWinner.image ?? avatarFallback}
+            src={imageSrc}
             alt={selectedWinner.name ?? 'Winner'}
             loading="lazy"
             className="w-20 h-20 rounded-2xl object-cover object-top border-2 border-amber-500/40"

@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { Target, Zap, Trophy, ChevronRight } from 'lucide-react';
 import { Badge } from '@/shared/components/ui/Badge';
 import { getCountryFlag } from '../utils/countryFlags';
+import { resolveImageSrc } from '../utils/imageUtils';
 import type { Winner } from '../types/winner';
 
 type Props = {
@@ -20,6 +21,7 @@ export const WinnerRowCard = React.memo(function WinnerRowCard({
   }, [winner, onSelect]);
 
   const avatarFallback = `https://ui-avatars.com/api/?name=${encodeURIComponent(winner.name ?? 'Unknown')}&background=374151&color=d1d5db`;
+  const imageSrc = resolveImageSrc(winner.image, avatarFallback);
 
   return (
     <article
@@ -42,7 +44,7 @@ export const WinnerRowCard = React.memo(function WinnerRowCard({
       {/* Avatar */}
       <div className="relative shrink-0">
         <img
-          src={winner.image ?? avatarFallback}
+          src={imageSrc}
           alt={winner.name ?? 'Winner'}
           loading="lazy"
           className="w-12 h-12 rounded-full object-cover object-top border-2 border-gray-700 group-hover:border-gray-600 transition-colors"
